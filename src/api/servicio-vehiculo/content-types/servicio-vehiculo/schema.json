@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servicio_vehiculos",
+  "info": {
+    "singularName": "servicio-vehiculo",
+    "pluralName": "servicio-vehiculos",
+    "displayName": "ServicioVehiculo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha_servicio": {
+      "type": "date"
+    },
+    "tipo_servicio": {
+      "type": "text",
+      "required": true
+    },
+    "descripcion": {
+      "type": "blocks"
+    },
+    "kilometraje": {
+      "type": "integer"
+    },
+    "nombre_mecanico": {
+      "type": "string"
+    },
+    "costo_servicio": {
+      "type": "biginteger",
+      "required": true
+    },
+    "estado_servicio": {
+      "type": "string"
+    },
+    "costo_repuestos": {
+      "type": "biginteger"
+    },
+    "fotos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

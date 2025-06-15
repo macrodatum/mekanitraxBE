@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "Cliente"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "celular": {
+      "type": "string",
+      "maxLength": 25,
+      "unique": true
+    },
+    "correo": {
+      "type": "email"
+    },
+    "fechaCumpleanos": {
+      "type": "date"
+    },
+    "vehiculos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vehiculo.vehiculo"
+    },
+    "documentid": {
+      "type": "string"
+    }
+  }
+}

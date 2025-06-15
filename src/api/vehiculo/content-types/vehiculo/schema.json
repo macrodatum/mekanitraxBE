@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vehiculos",
+  "info": {
+    "singularName": "vehiculo",
+    "pluralName": "vehiculos",
+    "displayName": "Vehiculo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "placa": {
+      "type": "string",
+      "maxLength": 20,
+      "required": true
+    },
+    "marca": {
+      "type": "string"
+    },
+    "modelo": {
+      "type": "string"
+    },
+    "anio": {
+      "type": "integer"
+    },
+    "vin": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "blocks"
+    },
+    "fotos": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "tipo_vehiculo": {
+      "type": "string"
+    },
+    "tipo_combustible": {
+      "type": "string"
+    },
+    "cilindraje": {
+      "type": "integer"
+    },
+    "transmision": {
+      "type": "string"
+    },
+    "traccion": {
+      "type": "string"
+    },
+    "kilometraje_actual": {
+      "type": "integer"
+    },
+    "estado": {
+      "type": "string"
+    },
+    "servicio_vehiculos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::servicio-vehiculo.servicio-vehiculo"
+    }
+  }
+}
